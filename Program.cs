@@ -91,21 +91,18 @@ namespace Module6Assignment
                         //p.items.RemoveAt(ID);
 
                         if (p.items[ID].Quantity > 1)
+                        {
                             Console.WriteLine(--p.items[ID].Quantity);
-                        
+                        }
                         else
-                            //p.items[ID].PrintRemoval(ID);
+                        {
+                            p.items[ID].PrintRemoval(ID);
                             p.items.RemoveAt(ID);
-
-                        // Console.WriteLine(p.items[ID].Name);
-                        // Console.WriteLine(p.items[ID].Quantity);
-                        // Console.WriteLine(p.items[ID].Price);
-
-                        //p.DisplayList(p.items);
+                        }
 
                         foreach (Item i in p.items)
                         {
-                            Console.WriteLine($"NEW: {i.Quantity} {i.Name} @ ${i.Price}");
+                            Console.WriteLine($"NEW: Qty: {i.Quantity} of {i.Name} @ ${i.Price}");
                         }
                     }
                 }

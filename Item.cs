@@ -40,7 +40,7 @@ namespace Module6Assignment
 
         public void Print()
         {
-            Console.WriteLine($"#{this.Quantity} - {this.name} @ {this.price:C}");
+            Console.WriteLine($"Qty: {this.Quantity} of {this.Name} @ ${this.Price}");
         }
     }
 }
