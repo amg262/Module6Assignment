@@ -20,6 +20,19 @@ namespace Module6Assignment
         }
 
 
+        public void DisplayList(List<Item> list = null)
+        {
+            if (list == null)
+            {
+                list = this.items;
+            }
+
+            foreach (Item i in list)
+            {
+                i.Print();
+            }
+        }
+
         static void Main(string[] args)
         {
             Program p = new Program();
@@ -50,15 +63,12 @@ namespace Module6Assignment
                 }
             } while (stockItem.ToUpper() != "NA");
 
-            foreach (Item i in p.items)
-            {
-                // Console.WriteLine(i.Name);
-                // Console.WriteLine(i.Quantity);
-                // Console.WriteLine(i.Price);
+            // foreach (Item i in p.items)
+            // {
+            //     i.Print();
+            // }
 
-                i.Print();
-            }
-
+            p.DisplayList();
 
             string index = "";
             int ID = 0;
@@ -68,23 +78,38 @@ namespace Module6Assignment
                 Console.WriteLine("Item to buy (NA when done)");
                 index = Console.ReadLine();
 
-                if (index.ToUpper() != "NA" && int.Parse(index) != 0)
+                if (index.ToUpper() != "NA")
                 {
                     Int32.TryParse(index, out ID);
 
-                    ID--;
+                    if (ID > 0)
+                        ID--;
 
                     if (p.items[ID] != null)
                     {
-                        p.items[ID].PrintRemoval(ID);
-                        p.items.RemoveAt(ID);
+                        //p.items[ID].PrintRemoval(ID);
+                        //p.items.RemoveAt(ID);
+
+                        if (p.items[ID].Quantity > 1)
+                            Console.WriteLine(--p.items[ID].Quantity);
+                        
+                        else
+                            //p.items[ID].PrintRemoval(ID);
+                            p.items.RemoveAt(ID);
 
                         // Console.WriteLine(p.items[ID].Name);
                         // Console.WriteLine(p.items[ID].Quantity);
                         // Console.WriteLine(p.items[ID].Price);
+
+                        //p.DisplayList(p.items);
+
+                        foreach (Item i in p.items)
+                        {
+                            Console.WriteLine($"NEW: {i.Quantity} {i.Name} @ ${i.Price}");
+                        }
                     }
                 }
-            } while (index.ToUpper() != "NA" && int.Parse(index) != 0);
+            } while (index.ToUpper() != "NA");
         }
     }
 }
