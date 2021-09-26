@@ -3,8 +3,8 @@
     public class Item
     {
         private string name = "";
-        private double quantity = 0;
         private double price = 0;
+        private double quantity = 0;
 
         public Item(string name = null, double quantity = default, double price = default)
         {
