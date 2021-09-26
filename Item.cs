@@ -1,4 +1,6 @@
-﻿namespace Module6Assignment
+﻿using System;
+
+namespace Module6Assignment
 {
     public class Item
     {
@@ -29,6 +31,16 @@
         {
             get => price;
             set => price = value;
+        }
+
+        public void PrintRemoval(int index)
+        {
+            Console.WriteLine($"REMOVE - ID: {index} | #{this.Quantity} - {this.name} @ {this.price:C}");
+        }
+
+        public void Print()
+        {
+            Console.WriteLine($"#{this.Quantity} - {this.name} @ {this.price:C}");
         }
     }
 }
