@@ -72,6 +72,7 @@ namespace Module6Assignment
 
             string index = "";
             int ID = 0;
+            double runningTotal = 0;
 
             do
             {
@@ -92,7 +93,8 @@ namespace Module6Assignment
 
                         if (p.items[ID].Quantity > 1)
                         {
-                            Console.WriteLine(--p.items[ID].Quantity);
+                            --p.items[ID].Quantity;
+                            runningTotal += p.items[ID].Price;
                         }
                         else
                         {
@@ -102,7 +104,9 @@ namespace Module6Assignment
 
                         foreach (Item i in p.items)
                         {
-                            Console.WriteLine($"NEW: Qty: {i.Quantity} of {i.Name} @ ${i.Price}");
+                            Console.WriteLine("--- NEW STOCK ---");
+                            Console.WriteLine($"Qty: {i.Quantity} of {i.Name} @ ${i.Price}");
+                            Console.WriteLine($"{runningTotal:C}");
                         }
                     }
                 }

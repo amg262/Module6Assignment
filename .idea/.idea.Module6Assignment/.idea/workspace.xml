@@ -4,7 +4,10 @@
     <projectFile>Module6Assignment.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9e50a820-b2a7-40f3-82a4-f2c3940039c4" name="Changes" comment="" />
+    <list default="true" id="9e50a820-b2a7-40f3-82a4-f2c3940039c4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Module6Assignment/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Module6Assignment/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,7 +73,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632623683256</updated>
-      <workItem from="1632623695283" duration="5880000" />
+      <workItem from="1632623695283" duration="6776000" />
+      <workItem from="1632711425515" duration="1048000" />
     </task>
     <servers />
   </component>
@@ -78,7 +82,7 @@
     <option name="version" value="3" />
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -90,6 +94,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
